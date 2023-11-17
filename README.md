@@ -45,7 +45,7 @@ See `ifacconf.typ`.
 
 # Installation
 
-For now, download `template.typ` and place in the same directory as your document.
+For now, download `template.typ` and `ifac-conference.csl` and place in the same directory as your document.
 A more structured template experience for Typst is likely going to come sometime soon (see [this comment from the creators](https://github.com/typst/templates/pull/18#issuecomment-1798188384))
 
 # Dependencies
