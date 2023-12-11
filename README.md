@@ -3,6 +3,8 @@
 IFAC stands for [International Federation of Automatic Control](https://ifac-control.org/).
 This repository is meant to be a port of the existing author tools for conference papers (e.g., for LaTeX, see [ifacconf_latex.zip](https://www.ifac-control.org/conferences/author-guide/copy_of_ifacconf_latex.zip/view)) for Typst.
 
+![image](https://github.com/avonmoll/ifacconf-typst/assets/4260850/2fffa48d-0551-4956-b5be-cc4094733a9c)
+
 # Minimal Working Example
 
 ```typst
