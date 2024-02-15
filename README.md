@@ -15,10 +15,15 @@ This repository is meant to be a port of the existing author tools for conferenc
   authors: (
     (
       name: "First A. Author",
+      email: "author@boulder.nist.gov",
+      affiliation: 1,
+    ),
+  ),
+  affiliations: (
+    (
       department: "Engineering",
       organization: "National Institute of Standards and Technology",
       address: "Boulder, CO 80305 USA",
-      email: "author@boulder.nist.gov"
     ),
   ),
   abstract: [
