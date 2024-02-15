@@ -12,22 +12,33 @@
   authors: (
     (
       name: "First A. Author",
-      organization: "National Institute of Standards and Technology",
-      address: "Boulder, CO 80305 USA",
-      email: "author@boulder.nist.gov"
+      email: "author@boulder.nist.gov",
+      affiliation: 1,
     ),
     (
       name: "Second B. Author, Jr.",
-      organization: "Colorado State University",
-      address: "Fort Collins, CO 80523 USA",
-      email: "author@lamar.colostate.edu"
+      email: "author@lamar.colostate.edu",
+      affiliation: 2,
     ),
     (
       name: "Third C. Author",
+      email: "author@snu.ac.kr",
+      affiliation: 3,
+    ),
+  ),
+  affiliations: (
+    (
+      organization: "National Institute of Standards and Technology",
+      address: "Boulder, CO 80305 USA",
+    ),
+    (
+      organization: "Colorado State University",
+      address: "Fort Collins, CO 80523 USA",
+    ),
+    (
       department: "Electrical Engineering Department",
       organization: "Seoul National University",
       address: "Seoul, Korea",
-      email: "author@snu.ac.kr"
     ),
   ),
   abstract: [
@@ -75,8 +86,7 @@ $
 (diff F) / (diff t) = D (diff^2 F) / (diff x^2)
 $ <sample>
 
-See @Abl56, @AbTaRu54, @Keo58, and @Pow85.
-// NOTE: multi-cite, e.g., @Abl56 @AbTaRu54 results in a spurious space following the last citation. Also, there is no way to include "and" before the last citation.
+See @Abl56 @AbTaRu54 @Keo58, and @Pow85.
 
 === Example. 
 This equation goes far beyond the celebrated theorem ascribed to the great Pythagoras by his followers.

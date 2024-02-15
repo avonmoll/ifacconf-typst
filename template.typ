@@ -11,10 +11,16 @@
   // The paper's title.
   title: "Paper Title",
 
-  // An array of authors. For each author you can specify a name,
-  // department, organization, location, and email. Everything but
-  // but the name is optional.
+  // An array of authors. For each author you can specify a name, email
+  // (optional), and affiliation. The affiliation must be an integer
+  // corresponding to an entry in the 1-indexed affiliations list (or 0 for no
+  // affiliation).
   authors: (),
+
+  // An array of affiliations. For each affiliation you can specify a
+  // department, organization, and address. Everything is optional (i.e., an
+  // affiliation can be an empty array).
+  affiliations: (),
 
   // The paper's abstract. Can be omitted if you don't have one.
   abstract: none,
@@ -132,9 +138,8 @@
 
 
   let star = [\u{1F7B1}]
-  grid(
-    columns: (3.5cm, 1fr, 3.5cm),
-    [],
+  pad(
+    x: 3.5cm,
     [
       #set align(center)
 
@@ -145,7 +150,6 @@
         text(title-font-size, strong(title))
       } else {
         set footnote(numbering: "*")
-        // text(12pt, strong[#title#footnote[#sponsor]])
         text(14pt, [*#title*#h(-2pt)#text(20pt, super[ #star])])
       }
       #v(2mm)
@@ -153,28 +157,37 @@
       // Display the authors list.
       #let alist = ()
       #for (i, a) in authors.enumerate() {
-        let mark = text(8pt, [\*] * (i + 1))
+        let mark = text(8pt, [\*] * (a.affiliation))
         alist.push(box([#strong(a.name)#h(2pt)#mark]))
       }
       #alist.join(h(4pt))
       #v(1mm)
 
       // Display the affiliations list
-      // #set text(style: "italic")
-      #for (i, a) in authors.enumerate() {
-        let mark = text(8pt, [\*] * (i + 1))
-        let affil-array = ()
-        if "department" in a { affil-array.push(a.department) }
-        if "organization" in a { affil-array.push(a.organization) }
-        if "address" in a { affil-array.push(a.address) }
-        if "email" in a { affil-array.push([(e-mail: #a.email)]) }
-        let affil = affil-array.join(", ")
-        [#mark #emph(affil)]
-        if i != (authors.len() - 1) [ \ ]
+      #for (i, af) in affiliations.enumerate() {
+          let mark = text(8pt, [\*] * (i + 1))
+          let email-array = ()
+          for au in authors {
+            if "affiliation" in au and au.affiliation == i + 1 and "email" in au {
+              email-array.push(au.email)
+            }
+          }
+          let emails = ""
+          if email-array.len() > 0 {
+            emails = "(email: " + email-array.join(", ") + ")"
+          }
+          
+          let affil-array = ()
+          if "department" in af { affil-array.push(af.department) }
+          if "organization" in af { affil-array.push(af.organization) }
+          if "address" in af { affil-array.push(af.address) }
+          let affil = affil-array.join(", ")
+          
+          [#mark #emph(affil) #emph(emails)]
+          if i != affiliations.len() - 1 [ \ ]
       }
       #v(3mm, weak: false)
     ],
-    []
   )
 
   // Display abstract and keywords.
@@ -365,3 +378,6 @@
 
 #let footnote = it => footnote[#h(4pt)#it]
 
+#let citep(it) = {
+  cite(it, style: "ifac-conference-citep.csl")
+}
