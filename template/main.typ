@@ -5,7 +5,7 @@
 // Adapted from ifacconf.tex by Juan a. de la Puente
 //==============================================================================
 
-#import "template.typ": *
+#import "@preview/abiding-ifacconf:0.1.0": *
 #show: ifacconf-rules
 #show: ifacconf.with(
   title: "Style for IFAC Conferences & Symposia: Use Title Case for Paper Title",
@@ -53,9 +53,8 @@
 = Introduction
 
 This document is a template for Typst.
-If you are reading a paper or PDF version of this document, please download the electronic file `ifacconf.typ`.
-You will also need the template file `template.typ`.
-Both files are available on github at #link("https://github.com/avonmoll/ifac-typst")[`https://github.com/avonmoll/ifacconf-typst`].
+Running the command `typst init @preview/abiding-ifacconf` will generate the files needed to get started..
+The template files are also available on github at #link("https://github.com/avonmoll/ifac-typst")[`https://github.com/avonmoll/ifacconf-typst`].
 
 Please stick to the format defined by the `ifacconf` function, and do not change the margins or the general layout of the paper.
 It is especially important that you do not put any running header/footer or page number in the submitted paper.#footnote[This is the default for the provided class file.]

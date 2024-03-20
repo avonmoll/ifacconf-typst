@@ -77,7 +77,6 @@
 
 
   // Configure Figures
-  // NOTE: multiline show rules using a code block do not seem to be working
   set figure.caption(separator: ". ")
   show figure.caption: set align(left)
   show figure.caption: set par(hanging-indent: 8mm)
@@ -247,7 +246,7 @@
   ]
 }
 
-#let bibliography = bibliography.with(title: "References", style: "ifac-conference.csl")
+#let bibliography = bibliography.with(title: "References", style: "CSL/ifac-conference.csl")
 
 // Support for numbered Theorems, etc.
 // NOTE: these definitions may be able to be cleaned up and compressed in the future
@@ -380,5 +379,5 @@
 #let footnote = it => footnote[#h(4pt)#it]
 
 #let citep(it) = {
-  cite(it, style: "ifac-conference-citep.csl")
+  cite(it, style: "CSL/ifac-conference-citep.csl")
 }
