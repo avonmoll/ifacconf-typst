@@ -75,10 +75,6 @@
   set enum(indent: 10pt, body-indent: 9pt)
   set list(indent: 10pt, body-indent: 9pt)
 
-  // Configure Tables
-  // NOTE: more specific rules (e.g., "where" rules) need to come before more general rules for the same element
-  show figure.caption.where(kind: "table"): set align(center)
-  show figure.where(kind: "table"): set figure.caption(position: top)
 
   // Configure Figures
   // NOTE: multiline show rules using a code block do not seem to be working
@@ -86,6 +82,11 @@
   show figure.caption: set align(left)
   show figure.caption: set par(hanging-indent: 8mm)
   set figure(numbering: "1", supplement: [Fig.])
+
+  // Configure Tables
+  show figure.caption.where(kind: "table"): set align(center)
+  show figure.where(kind: "table"): set figure.caption(position: top)
+  set table.hline(stroke: 0.5pt)
 
   // Configure Footnotes
   set footnote(numbering: "1")

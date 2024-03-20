@@ -50,8 +50,6 @@
   ],
 )
 
-#import "@preview/tablex:0.0.6": tablex, cellx, hlinex
-
 = Introduction
 
 This document is a template for Typst.
@@ -112,9 +110,6 @@ of the lengths of the other two sides.
 // #proposition[ ... ]    // Proposition
 // #criterion[ ... ]      // Criterion
 
-Of course LaTeX manages equations through built-in macros.
-You may wish to use the `amstex` package for enhanced math capabilities.
-
 == Figures
 
 To insert figures, use the `graphicx` package.
@@ -143,19 +138,19 @@ Tables must be centered and have a caption above them, numbered with Arabic nume
 See @margins for an example.
 
 #tablefig(
-  tablex(
+  table(
     columns: 4,
     align: center + horizon,
-    auto-lines: false,
-    stroke: 0.5pt,
+    stroke: none,
     inset: 3pt,
     [Page], [Top], [Bottom], [Left/Right],
-    hlinex(start: 0, end:4),
+    table.hline(),
     [First], [3.5], [2.5], [1.5],
     [Rest], [2.5], [2.5], [1.5],
-    hlinex(start: 0, end:4),
+    table.hline(),
   ),
-  caption: [Margin settings],
+  // caption: [Margin settings],
+  caption: [TTT]
 ) <margins>
 
 == Final Stage
