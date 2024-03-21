@@ -1,5 +1,5 @@
 //==============================================================================
-// ifacconf.typ 2023-11-17 Alexander Von Moll
+// main.typ 2023-11-17 Alexander Von Moll
 // Template for IFAC meeting papers
 //
 // Adapted from ifacconf.tex by Juan a. de la Puente

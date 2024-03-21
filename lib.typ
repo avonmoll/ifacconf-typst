@@ -1,5 +1,5 @@
 //==============================================================================
-// template.typ 2023-11-17 Alexander Von Moll
+// lib.typ 2023-11-17 Alexander Von Moll
 // Template for IFAC meeting papers
 //
 // Adapted from ifacconf.cls
