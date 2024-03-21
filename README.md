@@ -1,9 +1,11 @@
-# (unofficial) IFAC Conference Template for Typst
+# abiding-ifacconf
+
+(unofficial) IFAC Conference Template for Typst
 
 IFAC stands for [International Federation of Automatic Control](https://ifac-control.org/).
 This repository is meant to be a port of the existing author tools for conference papers (e.g., for LaTeX, see [ifacconf_latex.zip](https://www.ifac-control.org/conferences/author-guide/copy_of_ifacconf_latex.zip/view)) for Typst.
 
-# Usage
+## Usage
 
 Running the following command will create a new directory with all the files that are needed:
 
@@ -11,7 +13,7 @@ Running the following command will create a new directory with all the files tha
 typst init @preview/abiding-ifacconf
 ```
 
-# Configuration
+## Configuration
 
 This template exports the `ifacconf` function with the following named arguments:
 
@@ -21,7 +23,7 @@ This template exports the `ifacconf` function with the following named arguments
 - `keywords`: (default: ()) array of keywords to display after the abstract
 - `sponsor`: (default: none) acknowledgment of sponsor or financial support (appears as a footnote on the first page)
 
-# Minimal Working Example
+## Minimal Working Example
 
 ```typst
 #import "@preview:abiding-ifacconf:0.1.0": *
@@ -62,16 +64,16 @@ A minimum working example (with bibliography) @Abl56.
 #bibliography("refs.bib")
 ```
 
-# Full(er) Example
+## Full(er) Example
 
 See [`main.typ`](https://github.com/avonmoll/ifacconf-typst/blob/main/template/main.typ).
 
-# Dependencies
+## Dependencies
 
 - typst 0.11.0
 - ctheorems 1.1.0 (a Typst package for handling theorem-like environments)
 
-# Notes, features, etc.
+## Notes, features, etc.
 
 - the call to `#show: ifacconf-rules` is necessary for some show rules defined in `template.typ` to get activated
 - `ifac-conference.csl` is a lightly modified version of `apa.csl` and is included in order to change the citation format from, e.g., `(Able 1956)` to `Able (1956)` in order to match `ifacconf_latex`
@@ -81,10 +83,10 @@ See [`main.typ`](https://github.com/avonmoll/ifacconf-typst/blob/main/template/m
 - Typst did not seem to like BibTeX citation keys containing colons (which was how they came from `ifacconf_latex`)
 - alignment for linebreaks in long equations is somewhat manual (e.g., for equation (2) in `ifacconf.typ`) but probably there is a better way to handle this now or in the future
 - the files `refs.bib` (essentially) and `bifurcation.jpg` come from `ifacconf_latex`
-- the file `ifacconf.typ` is modeled directly after `ifacconf.tex` by Juan a. de la Puente
+- the file `template/main.typ` is modeled directly after `ifacconf.tex` by Juan a. de la Puente
 - the `citep` function renders citations like `(Keohane, 1958)` instead of the default style of `Keohane (1958)`
 
-# License
+## License
 
 This template is licensed according to the MIT No Attribution license (see `LICENSE.MD`).
 

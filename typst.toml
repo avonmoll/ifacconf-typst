@@ -9,7 +9,7 @@ license = "MIT-0"
 description = "An IFAC-style paper template to publish at conferences for International Federation of Automatic Control"
 keywords = ["International Federation of Automatic Control", "IFAC", "Electrical Engineering", "Computer Science", "conference"]
 categories = ["paper"]
-disciplines = ["computer-science", "engineering"]
+disciplines = ["computer-science", "engineering", "transportation", "mathematics"]
 
 [template]
 path = "template"
