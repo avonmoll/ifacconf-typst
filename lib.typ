@@ -93,9 +93,9 @@
 
   // Configure headings.
   set heading(numbering: "1.1.1")
-  show heading: it => locate(loc => {
+  show heading: it => {
     // Find out the final number of the heading counter.
-    let levels = counter(heading).at(loc)
+    let levels = counter(heading).get()
     let deepest = if levels != () {
       levels.last()
     } else {
@@ -134,7 +134,7 @@
         h(8pt)
       }
     }
-  })
+  }
 
 
   let star = [\u{1F7B1}]
@@ -216,7 +216,7 @@
   show: columns.with(2, gutter: 5mm)
   // show: columns.with(2, gutter: 3.5mm)
   set par(justify: true, leading: 0.4em)
-  show par: set block(spacing: 3.5mm)
+  set par(spacing: 3.5mm)
 
   if sponsor != none {
     scale(x: 0%, y:0%)[#footnote(numbering: (..nums) => super(text(7pt, star)))[#h(5pt)#sponsor]]
@@ -229,7 +229,7 @@
 
 }
 
-#import "@preview/ctheorems:1.1.0": *
+#import "@preview/ctheorems:1.1.3": *
 #let ifacconf-rules(doc) = { 
   show bibliography: set block(spacing: 5pt)
   show: thmrules
@@ -241,9 +241,11 @@
 #let appendix-counter = counter("appendix")
 #let appendix = it => {
   appendix-counter.step()
-  heading(numbering: none, supplement: "Appendix")[
-    A#lower[ppendix] #appendix-counter.display("A.")#h(5pt)#it
-  ]
+  context {
+    heading(numbering: none, supplement: "Appendix")[
+      A#lower[ppendix] #appendix-counter.display("A.")#h(5pt)#it
+    ]
+  }
 }
 
 #let bibliography = bibliography.with(title: "References", style: "CSL/ifac-conference.csl")
