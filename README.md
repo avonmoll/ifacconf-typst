@@ -26,7 +26,7 @@ This template exports the `ifacconf` function with the following named arguments
 ## Minimal Working Example
 
 ```typst
-#import "@preview:abiding-ifacconf:0.1.0": *
+#import "@preview:abiding-ifacconf:0.2.0": *
 #show: ifacconf-rules
 #show: ifacconf.with(
   title: "Minimal Working Example",
@@ -70,8 +70,8 @@ See [`main.typ`](https://github.com/avonmoll/ifacconf-typst/blob/main/template/m
 
 ## Dependencies
 
-- typst 0.11.0
-- ctheorems 1.1.0 (a Typst package for handling theorem-like environments)
+- typst 0.13.0
+- ctheorems 1.1.3 (a Typst package for handling theorem-like environments)
 
 ## Notes, features, etc.
 

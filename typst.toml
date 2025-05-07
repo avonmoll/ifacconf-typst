@@ -1,7 +1,7 @@
 [package]
 name = "abiding-ifacconf"
-version = "0.1.0"
-compiler = "0.11.0"
+version = "0.2.0"
+compiler = "0.13.0"
 entrypoint = "lib.typ"
 repository = "https://github.com/avonmoll/ifacconf-typst"
 authors = ["Alexander Von Moll <https://avonmoll.github.io>"]

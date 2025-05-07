@@ -5,7 +5,7 @@
 // Adapted from ifacconf.tex by Juan a. de la Puente
 //==============================================================================
 
-#import "@preview/abiding-ifacconf:0.1.0": *
+#import "@preview/abiding-ifacconf:0.2.0": *
 #show: ifacconf-rules
 #show: ifacconf.with(
   title: "Style for IFAC Conferences & Symposia: Use Title Case for Paper Title",
