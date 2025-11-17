@@ -26,7 +26,7 @@ This template exports the `ifacconf` function with the following named arguments
 ## Minimal Working Example
 
 ```typst
-#import "@preview:abiding-ifacconf:0.2.0": *
+#import "@preview:abiding-ifacconf:0.2.1": *
 #show: ifacconf-rules
 #show: ifacconf.with(
   title: "Minimal Working Example",
