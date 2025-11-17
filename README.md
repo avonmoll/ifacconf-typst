@@ -17,7 +17,7 @@ typst init @preview/abiding-ifacconf
 
 This template exports the `ifacconf` function with the following named arguments:
 
-- `authors`: (default: ()) array of authors. For each author you can specify a name, email (optional), and affiliation. The affiliation must be an integer corresponding to an entry in the 1-indexed affiliations list (or 0 for no affiliation).
+- `authors`: (default: ()) array of authors. For each author you can specify a name, email (optional), and affiliation. The affiliation must be an integer corresponding to an entry in the 1-indexed affiliations list (or 0 for no affiliation). For authors with multiple affiliations, use an array of integers. Their email will only be shown on their first affiliation.
 - `affiliations`: (default: ()) array of affiliations. For each affiliation you can specify a department, organization, and address. Everything is optional (i.e., an affiliation can be an empty array).
 - `abstract`: (default: none) the paper's abstract. Can be omitted if you don't have one.
 - `keywords`: (default: ()) array of keywords to display after the abstract
